@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="El Paso County Resolution 13-099 regarding animal keeping allowances for hen chickens.">
+    <title>Resolution No. 13-099 - El Paso County, CO</title>
+    <style>
+        /* Global Styles & Document Structure */
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.7;
+            color: #000;
+            background: #fff;
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            left: 0;
+            background: #000;
+            color: #fff;
+            padding: 8px 16px;
+            text-decoration: none;
+            z-index: 1000;
+            border-radius: 0 0 4px 0;
+        }
+        
+        .skip-link:focus {
+            top: 0;
+        }
+        /* Header */
+        
+        .document-header {
+            background: #f8f9fa;
+            padding: 40px 20px;
+            border-bottom: 3px solid #000;
+            text-align: center;
+        }
+        
+        .document-header h1 {
+            font-size: clamp(28px, 5vw, 40px);
+            margin-bottom: 10px;
+            line-height: 1.2;
+        }
+        
+        .document-header h2 {
+            font-size: clamp(18px, 4vw, 24px);
+            font-weight: normal;
+            color: #333;
+        }
+        /* Navigation */
+        
+        .page-navigation {
+            background: #f9f9f9;
+            border-bottom: 2px solid #333;
+            padding: 30px 20px;
+        }
+        
+        .page-navigation h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #666;
+            padding-bottom: 10px;
+        }
+        
+        .page-links {
+            list-style: none;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 15px;
+            padding: 0;
+        }
+        
+        .page-links a {
+            display: block;
+            padding: 12px 16px;
+            background: #fff;
+            border: 2px solid #666;
+            text-decoration: none;
+            color: #000;
+            border-radius: 4px;
+            text-align: center;
+            font-weight: 500;
+            transition: all 0.2s ease;
+        }
+        
+        .page-links a:hover,
+        .page-links a:focus {
+            background: #000;
+            color: #fff;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        /* Page Sections */
+        
+        .page-section {
+            border-bottom: 1px solid #ddd;
+        }
+        
+        .page-header {
+            background: #333;
+            color: #fff;
+            padding: 20px;
+        }
+        
+        .page-header h2 {
+            font-size: 20px;
+            margin: 0;
+            border: none;
+        }
+        
+        .page-content {
+            padding: 40px 20px;
+            font-family: 'Times New Roman', Times, serif;
+        }
+        
+        .page-content p,
+        .page-content li {
+            text-align: justify;
+        }
+        /* Specific Page Styles */
+        
+        #page-1 .resolution-title {
+            text-align: center;
+            margin: 30px 0;
+            line-height: 1.4;
+            font-weight: bold;
+        }
+        
+        #page-1 .findings {
+            margin: 20px 0 20px 40px;
+            list-style-type: decimal;
+        }
+        
+        #page-1 .footer-info {
+            margin-top: 40px;
+            text-align: right;
+            font-size: 12px;
+        }
+        
+        #page-1 .barcode {
+            display: block;
+            margin-top: 10px;
+            font-family: monospace;
+            font-size: 14px;
+        }
+        
+        #page-2 .signature-section {
+            margin-top: 60px;
+        }
+        
+        #page-2 .signature-date {
+            margin: 30px 0;
+        }
+        
+        #page-2 .board-title {
+            text-align: right;
+            margin-bottom: 20px;
+            font-weight: normal;
+        }
+        
+        #page-2 .signature-block {
+            margin-top: 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        
+        #page-2 .seal-placeholder {
+            width: 120px;
+            height: 120px;
+            display: inline-block;
+            vertical-align: bottom;
+            text-align: center;
+            border: 1px dashed #999;
+            padding: 10px;
+        }
+        
+        #page-2 .signature-line {
+            display: inline-block;
+            width: 300px;
+            border-bottom: 1px solid #000;
+        }
+        
+        #page-3 h3 {
+            font-family: Arial, sans-serif;
+            font-size: 18px;
+        }
+        
+        #page-3 .subsection {
+            margin: 20px 0;
+            padding-left: 40px;
+        }
+        
+        #page-3 .subsection-label {
+            font-weight: bold;
+            display: inline-block;
+            min-width: 40px;
+            margin-right: 10px;
+        }
+        
+        #page-3 .strikethrough {
+            text-decoration: line-through;
+        }
+        
+        #page-3 .underline {
+            text-decoration: underline;
+        }
+        
+        #page-3 .requirements-list {
+            margin: 15px 0 15px 50px;
+            padding-left: 20px;
+            list-style-type: none;
+        }
+        
+        #page-3 .requirements-list li {
+            margin: 8px 0;
+            padding-left: 25px;
+            position: relative;
+        }
+        
+        #page-3 .requirements-list li::before {
+            content: "■";
+            position: absolute;
+            left: 0;
+        }
+        
+        #page-4 .amendment-notice {
+            margin: 30px 0;
+            padding: 15px 0 15px 20px;
+            border-left: 4px solid #000;
+            background-color: #f9f9f9;
+        }
+        
+        #page-4 .amendment-notice a {
+            color: #000;
+            font-weight: bold;
+        }
+        
+        #page-4 .definition-term {
+            font-weight: bold;
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+        /* Responsive Design */
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 12px;
+            }
+            .page-content {
+                padding: 20px 12px;
+            }
+            .page-links {
+                grid-template-columns: 1fr;
+            }
+            #page-2 .signature-block {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+        
+        @media print {
+            .skip-link,
+            .page-navigation,
+            .page-header {
+                display: none;
+            }
+            body,
+            .document-header {
+                padding: 0;
+                border: none;
+                background: #fff;
+            }
+            .page-section {
+                border-bottom: none;
+                page-break-after: always;
+            }
+            .page-content {
+                padding: 0;
+                max-width: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <header role="banner" class="document-header">
+        <div class="container">
+            <h1>RESOLUTION NO. 13-099</h1>
+            <h2>BOARD OF COUNTY COMMISSIONERS, COUNTY OF EL PASO, STATE OF COLORADO</h2>
+        </div>
+    </header>
+
+    <nav role="navigation" class="page-navigation" aria-label="Document pages">
+        <div class="container">
+            <h2>Document Navigation</h2>
+            <ul class="page-links">
+                <li><a href="#page-1">Page 1</a></li>
+                <li><a href="#page-2">Page 2</a></li>
+                <li><a href="#page-3">Page 3</a></li>
+                <li><a href="#page-4">Page 4</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main id="main-content" role="main">
+
+        <section class="page-section" id="page-1" aria-labelledby="page-heading-1">
+            <header class="page-header">
+                <div class="container">
+                    <h2 id="page-heading-1">Page 1</h2>
+                </div>
+            </header>
+            <div class="container page-content">
+                <div class="resolution-title">
+                    <p>RESOLUTION TO AMEND THE ANIMAL KEEPING ALLOWANCES FOR CHICKENS IN RESIDENTIAL ZONING DISTRICTS AND MODIFY USE TABLE 5-2 TO ALLOW A HOBBY FARM IN THE RR2.5 (RESIDENTIAL RURAL) DISTRICT OF THE EL PASO COUNTY <u>LAND DEVELOPMENT CODE</u>                        (LDC-13-001)</p>
+                </div>
+                <div class="resolution-body">
+                    <p>WHEREAS, the El Paso County Development Services Department did file a request for approval of Amendments to modify the animal keeping allowances for hen chickens in residential zoning districts and modify Use Table 5-2 to allow a
+                        hobby farm in the RR2.5 (Residential Rural) District of the <u>Land Development Code</u> as herein described; as well as conforming amendments throughout the <u>Code</u>;</p>
+                    <p>WHEREAS, a public hearing was held by the El Paso County Planning Commission on February 5, 2013, upon which date the Planning Commission did by formal resolution recommend approval of the subject amendments; and</p>
+                    <p>WHEREAS, a public hearing was held by this Board on February 26, 2013; and</p>
+                    <p>WHEREAS, based on the evidence, testimony, exhibits, recommendations of the El Paso County Planning Commission, comments of the El Paso County Development Services Department, comments of public officials and agencies, and comments
+                        from all interested parties, this Board finds as follows:</p>
+                    <ol class="findings">
+                        <li>That proper publication and public notice were provided as required by law for the hearings before the Planning Commission and the Board of County Commissioners of El Paso County, Colorado.</li>
+                        <li>That the hearings before the Planning Commission and the Board were extensive and complete, that all pertinent facts, matters and issues were submitted and that all interested parties were heard at those hearings.</li>
+                        <li>That all data, surveys, analyses, and studies, as are required by the State of Colorado and El Paso County have been submitted, reviewed, and found to meet the intent of the General Provisions of the El Paso County <u>Land Development Code</u>.</li>
+                        <li>That the proposal shall hereby amend the <u>Land Development Code</u> for El Paso County.</li>
+                        <li>That for the above-stated and other reasons, the proposed Amendments are in the best interest of the health, safety, morals, convenience, order, prosperity and welfare of the citizens of El Paso County.</li>
+                    </ol>
+                    <p>NOW, THEREFORE, BE IT RESOLVED that the Board of County Commissioners of El Paso County, Colorado, hereby Amends the El Paso County Land Development Code, more particularly described in Exhibit A, which is attached hereto and incorporated
+                        by reference, as well as conforming amendments through the Code;</p>
+                </div>
+                <footer class="footer-info">
+                    <p>WAYNE W. WILLIAMS El Paso County, CO<br/> 03/01/2013 09:20:36 AM<br/> Doc $0.00 Page<br/> Rec $0.00 1 of 4</p>
+                    <div class="barcode">213027235</div>
+                </footer>
+            </div>
+        </section>
+
+        <section class="page-section" id="page-2" aria-labelledby="page-heading-2">
+            <header class="page-header">
+                <div class="container">
+                    <h2 id="page-heading-2">Page 2</h2>
+                </div>
+            </header>
+            <div class="container page-content">
+                <p>BE IT FURTHER RESOLVED that, in the case of any inconsistency with these amendments and any previous Zoning Regulations, these revisions shall prevail;</p>
+                <p>AND BE IT FURTHER RESOLVED that the record and recommendations of the El Paso County Planning Commission be adopted.</p>
+                <section aria-label="Signature Section" class="signature-section">
+                    <p class="signature-date">DONE THIS 26th day of February, 2013, at Colorado Springs, Colorado.</p>
+                    <div class="board-title">
+                        <p>BOARD OF COUNTY COMMISSIONERS<br/> OF EL PASO COUNTY, COLORADO</p>
+                    </div>
+                    <div class="signature-block">
+                        <div>
+                            <div aria-label="Space for Official Seal" class="seal-placeholder" role="img">
+                                <p>ATTEST:</p>
+                            </div>
+                            <p>By: <span aria-label="Signature of County Clerk & Recorder" class="signature-line"></span></p>
+                            <p>County Clerk &amp; Recorder</p>
+                        </div>
+                        <div>
+                            <p>By: <span aria-label="Signature of Chair" class="signature-line"></span></p>
+                            <p>Chair</p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </section>
+
+        <section class="page-section" id="page-3" aria-labelledby="page-heading-3">
+            <header class="page-header">
+                <div class="container">
+                    <h2 id="page-heading-3">Page 3 - Exhibit A</h2>
+                </div>
+            </header>
+            <div class="container page-content">
+                <section aria-label="Animal Keeping Regulations">
+                    <h3>5.2.5 Animal Keeping</h3>
+                    <div class="subsection">
+                        <p><span class="subsection-label">(A)</span><strong>Dogs and Cats</strong></p>
+                        <p>The keeping of more than 4 dogs or cats, in any combination, over 4 months of age, per ownership shall be considered a kennel and shall meet the standards for kennels.</p>
+                    </div>
+                    <div class="subsection">
+                        <p><span class="subsection-label">(B)</span><strong>Horses</strong></p>
+                        <p>The keeping of horses shall be considered a private or commercial stable and shall meet the standards for private or commercial stable. No horses shall be kept in any zoning district that does not allow a private or commercial
+                            stable.</p>
+                    </div>
+                    <div class="subsection">
+                        <p><span class="subsection-label">(C)</span><strong>Livestock</strong></p>
+                        <p>Livestock is allowed in any agricultural zoning district, <span class="underline">where the land is classified by this Code as a farm or ranch; or</span> in association with a hobby farm.</p>
+                    </div>
+                    <div class="subsection">
+                        <p><span class="subsection-label underline">(D)</span><strong class="underline">Hen Chickens</strong></p>
+                        <p><span class="underline">In a residential zone district allowing less than 2.5 acres, <span class="strikethrough">no more than</span> <em style="font-style: italic;">X a reasonable number of</em> hen chickens are allowed per ownership,
+                            provided the standards of Section E below are met. No roosters are permitted. In zoning districts where a hobby farm is allowed there is no maximum allowed number of chickens, hen or rooster.</span>
+                        </p>
+                    </div>
+                    <div class="subsection">
+                        <p><span class="subsection-label"><span class="underline">(D)</span>(E)</span><strong>Other Domesticated Animals</strong></p>
+                        <p>In addition to dogs, cats, horses, and livestock, other types of domesticated animals may be kept as a pet in a residential zoning district <span class="underline">allowing less than 2.5 acres</span> provided:</p>
+                        <ul class="requirements-list" role="list">
+                            <li>The animals do not exceed 100 pounds in weight each;</li>
+                            <li>The animals are thoroughly secured within the boundaries of the ownership;</li>
+                            <li>The animals produce no sounds or smell that may be reasonably regarded as offensive;</li>
+                            <li>The animals are not exotic, wild or ordinarily considered dangerous; and</li>
+                            <li>The animals are properly maintained to remain healthy and to prevent the accumulation of wastes.</li>
+                        </ul>
+                        <p>No more than 2 other domesticated animals shall be located on any ownership except where the other domesticated animals are fish, small reptiles and amphibians, small rodents, or small birds kept within a dwelling unit where there
+                            shall be no restriction on the number kept.</p>
+                    </div>
+                    <div class="subsection">
+                        <p><span class="subsection-label"><span class="underline">(E)</span>(F)</span><strong>No Other Animals Allowed</strong></p>
+                        <p>The keeping of animals, including exotic animals, not qualifying in any of the above categories shall not be allowed.</p>
+                    </div>
+                </section>
+            </div>
+        </section>
+
+        <section class="page-section" id="page-4" aria-labelledby="page-heading-4">
+            <header class="page-header">
+                <div class="container">
+                    <h2 id="page-heading-4">Page 4</h2>
+                </div>
+            </header>
+            <div class="container page-content">
+                <section aria-label="Amendment Notice" class="amendment-notice" role="note">
+                    <p><a href="#" aria-label="Amendment to Table 5.2">Amend Table 5.2 Accessory Uses to add Hobby Farm as an allowed accessory use in the RR2.5 District</a></p>
+                </section>
+                <section aria-label="Hobby Farm Definition" class="definition-section">
+                    <h4 class="definition-term">Hobby Farm</h4>
+                    <p>
+                        A parcel of land where livestock, animals, or birds are raised or garden crops grown in a manner either incidental to the principal residential use of the property or where the production of livestock or garden crops on the property does not constitute
+                        a principal income for the property owner. This would include 4H and similar types of programs.
+                    </p>
+                </section>
+            </div>
+        </section>
+    </main>
+
+</body>
+
+</html>

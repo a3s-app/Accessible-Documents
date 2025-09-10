@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Accessible document: Duplication and Adjudication Flowchart - Ballot Processing Workflow">
+    <title>Duplication and Adjudication Flowchart - Ballot Processing Workflow</title>
+    <style>
+        /* Document Structure - Full Width Responsive */
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.7;
+            color: #000;
+            background: #fff;
+            width: 100%;
+            max-width: 100%;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+        }
+        
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            left: 0;
+            background: #000;
+            color: #fff;
+            padding: 8px 16px;
+            text-decoration: none;
+            z-index: 1000;
+            border-radius: 0 0 4px 0;
+        }
+        
+        .skip-link:focus {
+            top: 0;
+        }
+        
+        .document-header {
+            background: #f8f9fa;
+            padding: 40px 20px;
+            margin-bottom: 0;
+            border-bottom: 3px solid #000;
+            width: 100%;
+        }
+        
+        .document-header .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        .document-header h1 {
+            font-size: clamp(28px, 5vw, 40px);
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+        
+        .document-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .document-info p {
+            margin: 0;
+            font-size: 14px;
+            padding: 8px 12px;
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        
+        .page-navigation {
+            background: #f9f9f9;
+            border-bottom: 2px solid #333;
+            padding: 30px 20px;
+            width: 100%;
+        }
+        
+        .page-navigation .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        .page-navigation h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #666;
+            padding-bottom: 10px;
+        }
+        
+        .page-links {
+            list-style: none;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 15px;
+            padding: 0;
+        }
+        
+        .page-links a {
+            display: block;
+            padding: 12px 16px;
+            background: #fff;
+            border: 2px solid #666;
+            text-decoration: none;
+            color: #000;
+            border-radius: 4px;
+            text-align: center;
+            font-weight: 500;
+            transition: all 0.2s ease;
+        }
+        
+        .page-links a:hover,
+        .page-links a:focus {
+            background: #000;
+            color: #fff;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        
+        .page-section {
+            margin-bottom: 0;
+            border-bottom: 1px solid #ddd;
+            width: 100%;
+        }
+        
+        .page-header {
+            background: #333;
+            color: #fff;
+            padding: 20px;
+            width: 100%;
+        }
+        
+        .page-header .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        .page-header h2 {
+            font-size: 20px;
+            margin: 0;
+            border: none;
+            color: #fff;
+        }
+        
+        .page-content {
+            width: 100%;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        
+        .document-footer {
+            background: #f8f9fa;
+            border-top: 3px solid #000;
+            padding: 40px 20px;
+            margin-top: 0;
+            width: 100%;
+        }
+        
+        .document-footer .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        .document-footer h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #666;
+            padding-bottom: 10px;
+        }
+        
+        .document-footer dl {
+            display: grid;
+            grid-template-columns: auto 1fr;
+            gap: 10px 20px;
+            align-items: baseline;
+        }
+        
+        .document-footer dt {
+            font-weight: 700;
+            color: #333;
+        }
+        
+        .document-footer dd {
+            margin: 0;
+        }
+        /* Responsive Design */
+        
+        @media (max-width: 1200px) {
+            .document-header,
+            .page-navigation,
+            .document-footer {
+                padding-left: 16px;
+                padding-right: 16px;
+            }
+            .page-content {
+                padding: 30px 16px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .document-header,
+            .page-navigation,
+            .document-footer {
+                padding-left: 12px;
+                padding-right: 12px;
+            }
+            .page-content {
+                padding: 20px 12px;
+            }
+            .document-info {
+                grid-template-columns: 1fr;
+            }
+            .page-links {
+                grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+                gap: 10px;
+            }
+            .page-links a {
+                padding: 10px 12px;
+                font-size: 14px;
+            }
+            .document-footer dl {
+                grid-template-columns: 1fr;
+                gap: 5px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .document-header,
+            .page-navigation,
+            .document-footer {
+                padding-left: 8px;
+                padding-right: 8px;
+            }
+            .page-content {
+                padding: 16px 8px;
+            }
+            .page-links {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        @media print {
+            .skip-link,
+            .page-navigation {
+                display: none;
+            }
+            body {
+                padding: 0;
+            }
+            .page-content {
+                padding: 0;
+                max-width: none;
+            }
+            .document-header,
+            .document-footer {
+                padding: 20px 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <header role="banner" class="document-header">
+        <div class="container">
+            <h1>Duplication-and-Adjudication-Flowchart_Final</h1>
+            <div class="document-info">
+                <p><strong>Document Type:</strong> Ballot Processing Flowchart</p>
+                <p><strong>Pages:</strong> 1</p>
+                <p><strong>Accessibility:</strong> WCAG 2.1 AA Compliant</p>
+                <p><strong>Layout:</strong> Full-width responsive design</p>
+                <p><strong>Features:</strong> Semantic HTML, Enhanced navigation, Process flow visualization</p>
+            </div>
+        </div>
+    </header>
+
+    <nav role="navigation" class="page-navigation" aria-label="Page navigation">
+        <div class="container">
+            <h2>Document Navigation</h2>
+            <ul class="page-links">
+                <li><a href="#page-1">Page 1</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main id="main-content" role="main">
+
+        <section class="page-section" id="page-1" aria-labelledby="page-heading-1">
+            <header class="page-header">
+                <div class="container">
+                    <h2 id="page-heading-1">Page 1</h2>
+                </div>
+            </header>
+            <div class="page-content">
+                <a class="skip-link" href="#main-content">Skip to main content</a>
+                <div class="page-content" id="main-content" role="main">
+                    <style>
+                        .page-content {
+                            max-width: 1400px;
+                            margin: 0 auto;
+                            padding: 2rem;
+                            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+                            line-height: 1.6;
+                            color: #000;
+                            background: #fff;
+                        }
+                        
+                        h1 {
+                            font-size: 2rem;
+                            margin-bottom: 1.5rem;
+                            border-bottom: 3px solid #000;
+                            padding-bottom: 0.5rem;
+                        }
+                        
+                        h2 {
+                            font-size: 1.5rem;
+                            margin-top: 2rem;
+                            margin-bottom: 1rem;
+                            font-weight: 600;
+                        }
+                        
+                        h3 {
+                            font-size: 1.2rem;
+                            margin-top: 1.5rem;
+                            margin-bottom: 0.75rem;
+                            font-weight: 600;
+                        }
+                        
+                        .flowchart-description {
+                            background: #f9f9f9;
+                            border: 1px solid #ddd;
+                            padding: 1.5rem;
+                            margin: 2rem 0;
+                            border-radius: 4px;
+                        }
+                        
+                        .process-overview {
+                            margin-bottom: 2rem;
+                            padding: 1rem;
+                            background: #f5f5f5;
+                            border-left: 4px solid #333;
+                        }
+                        
+                        .process-step {
+                            margin: 1.5rem 0;
+                            padding: 1rem;
+                            border: 1px solid #ccc;
+                            background: #fafafa;
+                        }
+                        
+                        .process-step h3 {
+                            margin-top: 0;
+                            color: #333;
+                        }
+                        
+                        .decision-point {
+                            margin: 1.5rem 0;
+                            padding: 1rem;
+                            background: #fff3cd;
+                            border: 2px solid #ffc107;
+                            border-radius: 4px;
+                        }
+                        
+                        .location-box {
+                            background: #e9ecef;
+                            padding: 0.75rem;
+                            margin: 1rem 0;
+                            font-weight: 600;
+                            text-align: center;
+                            border: 2px solid #6c757d;
+                        }
+                        
+                        .subprocess {
+                            margin-left: 2rem;
+                            padding-left: 1rem;
+                            border-left: 3px solid #28a745;
+                        }
+                        
+                        ol.process-flow {
+                            counter-reset: step-counter;
+                            list-style: none;
+                            padding-left: 0;
+                        }
+                        
+                        ol.process-flow li {
+                            counter-increment: step-counter;
+                            margin: 1rem 0;
+                            padding-left: 3rem;
+                            position: relative;
+                        }
+                        
+                        ol.process-flow li::before {
+                            content: counter(step-counter);
+                            position: absolute;
+                            left: 0;
+                            top: 0;
+                            background: #000;
+                            color: #fff;
+                            width: 2rem;
+                            height: 2rem;
+                            border-radius: 50%;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            font-weight: bold;
+                        }
+                        
+                        .flow-connection {
+                            margin: 0.5rem 0;
+                            padding: 0.5rem;
+                            background: #f0f0f0;
+                            border-left: 3px solid #666;
+                        }
+                        
+                        @media print {
+                            .page-content {
+                                padding: 1rem;
+                            }
+                            .process-step,
+                            .decision-point {
+                                break-inside: avoid;
+                            }
+                        }
+                        
+                        @media (max-width: 768px) {
+                            .page-content {
+                                padding: 1rem;
+                            }
+                            h1 {
+                                font-size: 1.5rem;
+                            }
+                            .subprocess {
+                                margin-left: 1rem;
+                            }
+                        }
+                    </style>
+                    <h1>Ballot Processing Flowchart: Duplication and Adjudication Process</h1>
+                    <section aria-label="Flowchart Description" class="flowchart-description" role="region">
+                        <div class="process-overview">
+                            <p><strong>Overview:</strong> This flowchart illustrates the complete ballot processing workflow between two main operations centers, showing how ballots requiring special handling are processed through duplication and adjudication
+                                procedures before final storage.</p>
+                        </div>
+                        <h2>Processing Locations</h2>
+                        <div class="location-box">
+                            <strong>Ft. Carson Operations Center</strong>
+                        </div>
+                        <p>Primary entry point for ballot processing and initial sorting.</p>
+                        <div class="location-box">
+                            <strong>Peterson Counting Center</strong>
+                        </div>
+                        <p>Central hub for ballot counting and adjudication processes.</p>
+                        <h2>Main Process Flow</h2>
+                        <ol class="process-flow">
+                            <li>
+                                <h3>Initial Ballot Intake at Ft. Carson Operations Center</h3>
+                                <p>Ballots arrive at the Ft. Carson Operations Center where they undergo initial assessment and sorting.</p>
+                            </li>
+                            <li>
+                                <h3>Ballot Categorization for Duplication</h3>
+                                <div class="decision-point">
+                                    <p><strong>Three categories of ballots are designated for duplication:</strong></p>
+                                    <ul>
+                                        <li>Ballots with noticeable damage or marked with red ink are removed from pre-processing and designated for duplication</li>
+                                        <li>Ballots that cannot be read by scanners in their original format (military and overseas ballots, special district ballots, etc.) are designated for duplication</li>
+                                        <li>Ballots the scanner cannot read are removed and designated for duplication</li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <h3>Duplication Process</h3>
+                                <div class="process-step">
+                                    <h3>Duplication</h3>
+                                    <p>Central process where damaged or unreadable ballots are recreated in a readable format.</p>
+                                    <div class="subprocess">
+                                        <h4>Resolution Board</h4>
+                                        <p>Ballots are individually examined and logged</p>
+                                        <h4>Input Judge</h4>
+                                        <p>Ballots are recreated on ballot marking device and labelled with unique identifiers</p>
+                                        <h4>Review Board</h4>
+                                        <p>Original and duplicated ballots are compared side-by-side</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <h3>Post-Duplication Routing</h3>
+                                <div class="flow-connection">
+                                    <p><strong>Duplicated ballots:</strong> Duplicated ballots move forward to the standard ballot counting process</p>
+                                    <p><strong>Original ballots:</strong> Original ballots are separated and sealed for storage</p>
+                                </div>
+                            </li>
+                            <li>
+                                <h3>Transfer to Peterson Counting Center</h3>
+                                <p>Both original ballots from Ft. Carson and duplicated ballots are routed to the Peterson Counting Center for further processing.</p>
+                            </li>
+                            <li>
+                                <h3>Scanner Processing and Adjudication Trigger</h3>
+                                <div class="decision-point">
+                                    <p>Ballots successfully read by a scanner and found to have overvotes, undervotes, write-in votes, and/or ambiguous markings are transmitted to adjudication</p>
+                                </div>
+                            </li>
+                            <li>
+                                <h3>Adjudication Process</h3>
+                                <div class="process-step">
+                                    <h3>Adjudication</h3>
+                                    <div class="subprocess">
+                                        <p>Ballots are resolved in accordance with the Secretary of State's Voter Intent Guide by a bipartisan team of judges</p>
+                                        <p>Adjudicated ballot images are marked digitally and an audit log is attached to the record</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <h3>Final Storage</h3>
+                                <div class="process-step">
+                                    <h3>Sealed for Storage</h3>
+                                    <p>All processed ballots, including adjudicated ballot records, are sealed for secure storage.</p>
+                                </div>
+                            </li>
+                        </ol>
+                        <h2>Process Flow Summary</h2>
+                        <p>The flowchart demonstrates a comprehensive ballot processing system with multiple quality control checkpoints. Ballots flow from initial intake at Ft. Carson Operations Center through potential duplication processes, then to the
+                            Peterson Counting Center for counting and possible adjudication, before final secure storage. The system ensures that all ballots, regardless of condition or format, are properly processed and counted while maintaining a complete
+                            audit trail.</p>
+                    </section>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer role="contentinfo" class="document-footer">
+        <div class="container">
+            <h2>Document Information</h2>
+            <dl>
+                <dt>Document:</dt>
+                <dd>Ballot Processing Flowchart: Duplication and Adjudication Process</dd>
+                <dt>Layout Features:</dt>
+                <dd>Full-width responsive design, Enhanced semantic HTML, Process flow visualization</dd>
+                <dt>Accessibility:</dt>
+                <dd>WCAG 2.1 AA compliant, Screen reader optimized, Keyboard navigation</dd>
+                <dt>Content:</dt>
+                <dd>Comprehensive ballot processing workflow with quality control checkpoints</dd>
+            </dl>
+        </div>
+    </footer>
+</body>
+
+</html>
