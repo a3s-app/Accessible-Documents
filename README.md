@@ -45,5 +45,17 @@
         </a>
       </td>
     </tr>
+     <tr>
+      <td>Duplication and Adjudication Flowchart Final</td>
+      <td>
+        <a href="https://github.com/a3s-app/Accessible-Documents/blob/main/OriginalPDFS/Duplication-and-Adjudication-Flowchart_Final.pdf">View on GitHub</a> |
+        <a href="https://raw.githubusercontent.com/a3s-app/Accessible-Documents/main/OriginalPDFS/Duplication-and-Adjudication-Flowchart_Final.pdf">Download</a>
+      </td>
+      <td>
+        <a href="https://htmlpreview.github.io/?https://github.com/a3s-app/Accessible-Documents/blob/main/AccessibleDocuments/roadmap.html">
+          Open HTML Preview Roadmap
+        </a>
+      </td>
+    </tr>
   </tbody>
 </table>
