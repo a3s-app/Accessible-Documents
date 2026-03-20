@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<!-- saved from url=(0053)file:///Users/jason/Downloads/ACMM_7Goals_Simple.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>ACMM 7 Goals — Perspective Tester</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:wght@400&family=DM+Sans:wght@400;500;600;700&display=swap');
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: #f0f4f8;
+}
+
+.page {
+  width: 8.5in;
+  height: 11in;
+  margin: 0 auto;
+  background: white;
+  display: flex;
+  flex-direction: column;
+}
+
+/* HEADER */
+.header {
+  background: #0f2240;
+  padding: 16px 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header h1 {
+  font-family: 'DM Serif Display', serif;
+  font-size: 15pt;
+  color: white;
+}
+.header h1 span { color: #38bdf8; }
+.header p { font-size: 8.5pt; color: #94a3b8; }
+
+/* INTRO */
+.intro {
+  background: #1e3a5f;
+  padding: 8px 32px;
+}
+.intro p {
+  font-size: 8.5pt;
+  color: #cbd5e1;
+  line-height: 1.5;
+}
+.intro strong { color: white; }
+
+/* BODY */
+.body {
+  flex: 1;
+  padding: 16px 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* GOAL ROW */
+.goal {
+  display: grid;
+  grid-template-columns: 48px 160px 1fr 180px;
+  gap: 0;
+  border: 1px solid #e2e8f0;
+  border-radius: 3px;
+  overflow: hidden;
+  flex: 1;
+}
+
+.goal-num {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16pt;
+  font-weight: 700;
+  color: white;
+}
+
+.goal-name {
+  padding: 10px 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-right: 1px solid rgba(255,255,255,0.15);
+}
+.goal-name .icon { font-size: 14pt; margin-bottom: 3px; }
+.goal-name strong {
+  font-size: 9pt;
+  font-weight: 700;
+  color: white;
+  line-height: 1.2;
+}
+
+.goal-milestones {
+  padding: 10px 14px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 4px;
+  background: #f8fafc;
+  border-right: 1px solid #e2e8f0;
+}
+.milestone {
+  display: flex;
+  align-items: flex-start;
+  gap: 6px;
+  font-size: 8.5pt;
+  color: #334155;
+  line-height: 1.3;
+}
+.milestone::before {
+  content: '→';
+  color: #94a3b8;
+  flex-shrink: 0;
+  font-size: 8pt;
+  margin-top: 1px;
+}
+
+.goal-pt {
+  padding: 10px 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 4px;
+  background: white;
+}
+.pt-item {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 7.8pt;
+  color: #1e40af;
+  line-height: 1.3;
+}
+.pt-dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+/* COLORS */
+.g1 .goal-num, .g1 .goal-name { background: #0f2240; }
+.g2 .goal-num, .g2 .goal-name { background: #1d4ed8; }
+.g3 .goal-num, .g3 .goal-name { background: #0369a1; }
+.g4 .goal-num, .g4 .goal-name { background: #0ea5e9; }
+.g5 .goal-num, .g5 .goal-name { background: #7c3aed; }
+.g6 .goal-num, .g6 .goal-name { background: #059669; }
+.g7 .goal-num, .g7 .goal-name { background: #d97706; }
+
+.g1 .pt-dot { background: #0f2240; }
+.g2 .pt-dot { background: #1d4ed8; }
+.g3 .pt-dot { background: #0369a1; }
+.g4 .pt-dot { background: #0ea5e9; }
+.g5 .pt-dot { background: #7c3aed; }
+.g6 .pt-dot { background: #059669; }
+.g7 .pt-dot { background: #d97706; }
+
+/* COLUMN HEADERS */
+.col-headers {
+  display: grid;
+  grid-template-columns: 48px 160px 1fr 180px;
+  gap: 0;
+  padding: 0 0 4px;
+}
+.col-h {
+  font-size: 7pt;
+  font-weight: 700;
+  color: #94a3b8;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 0 12px;
+}
+.col-h:first-child { padding-left: 0; text-align: center; }
+
+/* FOOTER */
+.footer {
+  background: #f1f5f9;
+  border-top: 1px solid #e2e8f0;
+  padding: 8px 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer p { font-size: 7.5pt; color: #64748b; }
+.footer strong { color: #0f2240; }
+.footer span { color: #1d4ed8; font-weight: 600; }
+
+@media print {
+  body { background: white; }
+  .page { margin: 0; width: 100%; height: 100vh; }
+}
+</style>
+</head>
+<body>
+<div class="page">
+
+  <div class="header">
+    <div>
+      <h1>ACMM — <span>7 Goals at a Glance</span></h1>
+      <p>California Community Colleges · Accessibility Capability Maturity Model · Section 504 Compliance</p>
+    </div>
+    <div style="text-align:right">
+      <p style="color:white;font-weight:600;">Perspective Tester &nbsp;·&nbsp; A3S</p>
+      <p>perspectivetester.com &nbsp;·&nbsp; a3s.app</p>
+    </div>
+  </div>
+
+  <div class="intro">
+    <p>The ACMM consists of <strong>89 milestones across 7 goals</strong>. The system target is <strong>Level 3 (Established)</strong> — formal, standard practices in place. Perspective Tester provides the expert team that implements each goal and produces the documentation your annual ACMM scoring requires.</p>
+  </div>
+
+  <div class="body">
+
+    <div class="col-headers">
+      <div class="col-h">#</div>
+      <div class="col-h">Goal</div>
+      <div class="col-h">Key Milestones</div>
+      <div class="col-h">How We Help</div>
+    </div>
+
+    <!-- GOAL 1 -->
+    <div class="goal g1">
+      <div class="goal-num">1</div>
+      <div class="goal-name">
+        <div class="icon">🏛️</div>
+        <strong>Governance &amp; Strategic Planning</strong>
+      </div>
+      <div class="goal-milestones">
+        <div class="milestone">Accessibility integrated into institutional policies &amp; procedures</div>
+        <div class="milestone">Executive-sponsored governance body meeting regularly</div>
+        <div class="milestone">Annual improvement plan with specific activities &amp; evidence</div>
+      </div>
+      <div class="goal-pt">
+        <div class="pt-item"><div class="pt-dot"></div>Policy templates &amp; governance documentation</div>
+        <div class="pt-item"><div class="pt-dot"></div>Co-develop your annual improvement plan</div>
+        <div class="pt-item"><div class="pt-dot"></div>Monthly reports formatted as ACMM evidence</div>
+      </div>
+    </div>
+
+    <!-- GOAL 2 -->
+    <div class="goal g2">
+      <div class="goal-num">2</div>
+      <div class="goal-name">
+        <div class="icon">📚</div>
+        <strong>Educational Materials &amp; Technology</strong>
+      </div>
+      <div class="goal-milestones">
+        <div class="milestone">Accessible course documents, PDFs, and syllabi</div>
+        <div class="milestone">Captions &amp; audio descriptions for all video/audio content</div>
+        <div class="milestone">LMS templates and third-party courseware evaluated</div>
+      </div>
+      <div class="goal-pt">
+        <div class="pt-item"><div class="pt-dot"></div>PDF &amp; document remediation to WCAG 2.1 AA</div>
+        <div class="pt-item"><div class="pt-dot"></div>Manual caption accuracy review</div>
+        <div class="pt-item"><div class="pt-dot"></div>Canvas &amp; courseware accessibility audits</div>
+      </div>
+    </div>
+
+    <!-- GOAL 3 -->
+    <div class="goal g3">
+      <div class="goal-num">3</div>
+      <div class="goal-name">
+        <div class="icon">🌐</div>
+        <strong>Web Accessibility</strong>
+      </div>
+      <div class="goal-milestones">
+        <div class="milestone">All websites inventoried including third-party applications</div>
+        <div class="milestone">Regular automated AND manual WCAG 2.1 AA evaluations</div>
+        <div class="milestone">Barriers remediated, re-tested, and statements updated monthly</div>
+      </div>
+      <div class="goal-pt">
+        <div class="pt-item"><div class="pt-dot"></div>Full site inventory &amp; manual screen reader testing</div>
+        <div class="pt-item"><div class="pt-dot"></div>Code-level remediation with verified re-testing</div>
+        <div class="pt-item"><div class="pt-dot"></div>Monthly accessibility statement updates</div>
+      </div>
+    </div>
+
+    <!-- GOAL 4 -->
+    <div class="goal g4">
+      <div class="goal-num">4</div>
+      <div class="goal-name">
+        <div class="icon">📁</div>
+        <strong>Digital Content</strong>
+      </div>
+      <div class="goal-milestones">
+        <div class="milestone">Accessible documents across every department &amp; student org</div>
+        <div class="milestone">Communication &amp; marketing templates remediated</div>
+        <div class="milestone">Video &amp; audio content captioned across all campus units</div>
+      </div>
+      <div class="goal-pt">
+        <div class="pt-item"><div class="pt-dot"></div>Department-by-department document remediation</div>
+        <div class="pt-item"><div class="pt-dot"></div>Accessible flyer, email &amp; social media templates</div>
+        <div class="pt-item"><div class="pt-dot"></div>Video library audit &amp; caption remediation</div>
+      </div>
+    </div>
+
+    <!-- GOAL 5 -->
+    <div class="goal g5">
+      <div class="goal-num">5</div>
+      <div class="goal-name">
+        <div class="icon">🛒</div>
+        <strong>ICT Procurement &amp; Adoption</strong>
+      </div>
+      <div class="goal-milestones">
+        <div class="milestone">Vendor VPATs obtained &amp; independently verified before purchase</div>
+        <div class="milestone">Accessibility evaluation built into every procurement process</div>
+        <div class="milestone">Accessibility provisions in all contracts &amp; purchase orders</div>
+      </div>
+      <div class="goal-pt">
+        <div class="pt-item"><div class="pt-dot"></div>Independent VPAT &amp; ACR production</div>
+        <div class="pt-item"><div class="pt-dot"></div>Pre-purchase AT testing of ICT products</div>
+        <div class="pt-item"><div class="pt-dot"></div>Contract language templates for procurement staff</div>
+      </div>
+    </div>
+
+    <!-- GOAL 6 -->
+    <div class="goal g6">
+      <div class="goal-num">6</div>
+      <div class="goal-name">
+        <div class="icon">🎓</div>
+        <strong>Training &amp; Professional Development</strong>
+      </div>
+      <div class="goal-milestones">
+        <div class="milestone">Ongoing faculty training on documents, video, and LMS content</div>
+        <div class="milestone">Role-specific web training for developers &amp; content editors</div>
+        <div class="milestone">Procurement training for buyers &amp; contracting staff</div>
+      </div>
+      <div class="goal-pt">
+        <div class="pt-item"><div class="pt-dot"></div>Live workshops &amp; role-specific training programs</div>
+        <div class="pt-item"><div class="pt-dot"></div>Developer WCAG guidance &amp; editor content training</div>
+        <div class="pt-item"><div class="pt-dot"></div>VPAT review &amp; procurement process training</div>
+      </div>
+    </div>
+
+    <!-- GOAL 7 -->
+    <div class="goal g7">
+      <div class="goal-num">7</div>
+      <div class="goal-name">
+        <div class="icon">🤝</div>
+        <strong>Culture &amp; Organizational Integration</strong>
+      </div>
+      <div class="goal-milestones">
+        <div class="milestone">EEAA plans for partially accessible ICT during remediation</div>
+        <div class="milestone">Accessibility embedded in faculty &amp; staff onboarding</div>
+        <div class="milestone">Library, Auxiliary, and UDL practices aligned institution-wide</div>
+      </div>
+      <div class="goal-pt">
+        <div class="pt-item"><div class="pt-dot"></div>Equally Effective Alternative Access plan drafting</div>
+        <div class="pt-item"><div class="pt-dot"></div>Onboarding accessibility content &amp; role guides</div>
+        <div class="pt-item"><div class="pt-dot"></div>Continuous monitoring sustains institutional progress</div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="footer">
+    <p><strong>Perspective Tester &nbsp;|&nbsp; A3S</strong> &nbsp;·&nbsp; IAAP-Certified &nbsp;·&nbsp; Manual Testing &nbsp;·&nbsp; No Overlays &nbsp;·&nbsp; Section 504 Specialists</p>
+    <p><span>perspectivetester.com &nbsp;·&nbsp; a3s.app</span> &nbsp;·&nbsp; info@perspectivetester.com</p>
+  </div>
+
+</div>
+
+
+</body></html>
